@@ -1,39 +1,39 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { BarChart3, Globe, LineChart, MessageSquareText, PenTool, Smartphone } from "lucide-react";
+import { Settings, Users, LineChart, MessageSquareText, Cog, Smartphone } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: <Globe className="h-10 w-10 text-primary" />,
-      title: "Webdesign & Ontwikkeling",
-      description: "We bouwen prachtige, functionele websites die uw merk versterken en conversies stimuleren."
+      icon: <Settings className="h-10 w-10 text-primary" />,
+      title: "Bedrijfsautomatisering",
+      description: "We stroomlijnen uw bedrijfsprocessen met slimme automatiseringsoplossingen die tijd en kosten besparen."
     },
     {
-      icon: <BarChart3 className="h-10 w-10 text-primary" />,
-      title: "SEO Optimalisatie",
-      description: "Verbeter uw online zichtbaarheid met onze SEO strategieën die u hoger in Google rankings plaatsen."
-    },
-    {
-      icon: <Smartphone className="h-10 w-10 text-primary" />,
-      title: "Social Media Marketing",
-      description: "Wij beheren uw sociale mediakanalen met boeiende content die engagement en merkbekendheid vergroot."
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: "Klantenservice Oplossingen",
+      description: "Verbeter de klanttevredenheid met onze geautomatiseerde klantenservice systemen en ondersteuningstools."
     },
     {
       icon: <LineChart className="h-10 w-10 text-primary" />,
-      title: "Betaalde Advertenties",
-      description: "Onze gerichte advertentiecampagnes leveren een hoog rendement op uw marketinginvesteringen."
+      title: "Marketing Automatisering",
+      description: "Verhoog uw marketingeffectiviteit met onze geautomatiseerde tools voor campagnebeheer en klantbetrokkenheid."
     },
     {
-      icon: <PenTool className="h-10 w-10 text-primary" />,
-      title: "Branding & Design",
-      description: "Wij creëren unieke visuele identiteiten die uw merk laten opvallen in een drukke markt."
+      icon: <Cog className="h-10 w-10 text-primary" />,
+      title: "Werkstroom Optimalisatie",
+      description: "Optimaliseer uw bedrijfsprocessen door handmatige taken te automatiseren en efficiëntie te verhogen."
     },
     {
       icon: <MessageSquareText className="h-10 w-10 text-primary" />,
-      title: "Content Marketing",
-      description: "We ontwikkelen waardevolle content die uw doelgroep aanspreekt en leidt tot meer conversies."
+      title: "Communicatie Tools",
+      description: "Verbeter de interne en externe communicatie met onze geïntegreerde communicatie-oplossingen."
+    },
+    {
+      icon: <Smartphone className="h-10 w-10 text-primary" />,
+      title: "Mobiele Integraties",
+      description: "Breid uw bereik uit met naadloze mobiele integraties die toegankelijkheid en gebruiksgemak bieden."
     }
   ];
 
@@ -41,9 +41,9 @@ const Services = () => {
     <section id="diensten" className="section bg-accent">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Onze Digitale Marketingdiensten</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Onze Automatisering & Service Oplossingen</h2>
           <p className="text-muted-foreground text-lg">
-            Wij bieden een volledig pakket aan digitale marketingdiensten om uw bedrijf te helpen groeien en uw doelen te bereiken.
+            Wij helpen bedrijven groeien door slimme automatisering, efficiënte klantenservice en effectieve marketingstrategieën.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const Services = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button className="btn-primary">Bekijk alle diensten</Button>
+          <Button className="btn-primary">Bekijk alle oplossingen</Button>
         </div>
       </div>
     </section>

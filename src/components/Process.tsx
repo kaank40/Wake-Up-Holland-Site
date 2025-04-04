@@ -1,28 +1,28 @@
 
 import React from 'react';
-import { ArrowRight, CheckCircle, Coffee, Search, Settings, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Search, Cog, Zap, BarChart } from 'lucide-react';
 
 const Process = () => {
   const steps = [
     {
       icon: <Search className="h-6 w-6 text-white" />,
-      title: "Onderzoek & Strategie",
-      description: "We beginnen met een grondige analyse van uw bedrijf, markt en concurrentie om de beste strategie te ontwikkelen."
+      title: "Analyse & Ontdekking",
+      description: "We beginnen met een grondige analyse van uw huidige processen en identificeren waar automatisering de meeste waarde kan toevoegen."
     },
     {
-      icon: <Settings className="h-6 w-6 text-white" />,
-      title: "Planning & Ontwerp",
-      description: "We creëren gedetailleerde actieplannen en ontwerpen die aansluiten bij uw doelen en merkidentiteit."
+      icon: <Cog className="h-6 w-6 text-white" />,
+      title: "Oplossing Ontwerp",
+      description: "We ontwikkelen op maat gemaakte automatiseringsoplossingen die perfect aansluiten bij uw zakelijke behoeften en doelstellingen."
     },
     {
       icon: <Zap className="h-6 w-6 text-white" />,
-      title: "Uitvoering & Lancering",
-      description: "We brengen onze strategieën tot leven met professionele ontwikkeling en implementatie van marketingcampagnes."
+      title: "Implementatie & Training",
+      description: "We zorgen voor een soepele implementatie en trainen uw team om het maximale uit de nieuwe systemen te halen."
     },
     {
-      icon: <Coffee className="h-6 w-6 text-white" />,
-      title: "Analyse & Verbetering",
-      description: "We monitoren voortdurend de resultaten en optimaliseren onze aanpak voor het beste rendement."
+      icon: <BarChart className="h-6 w-6 text-white" />,
+      title: "Monitoring & Optimalisatie",
+      description: "We blijven uw systemen monitoren en optimaliseren om ervoor te zorgen dat ze blijven presteren en meegroeien met uw bedrijf."
     }
   ];
 
@@ -30,9 +30,9 @@ const Process = () => {
     <section id="werkwijze" className="section">
       <div className="container-custom">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Onze Werkwijze</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Hoe Wij Werken</h2>
           <p className="text-muted-foreground text-lg">
-            Een beproefde methode die resultaten oplevert. Zo pakken we elk project aan om uw succes te garanderen.
+            Onze bewezen methodologie zorgt voor succesvolle implementatie van automatisering en verbetering van uw bedrijfsprocessen.
           </p>
         </div>
 
@@ -62,16 +62,16 @@ const Process = () => {
         <div className="mt-16 bg-accent rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">Klaar om uw online aanwezigheid te verbeteren?</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">Klaar om uw bedrijfsprocessen te automatiseren?</h3>
               <p className="text-muted-foreground mb-6">
-                Wij helpen u bij elke stap van het proces om uw digitale marketingdoelen te bereiken.
+                Wij helpen u bij elke stap om uw bedrijfsprocessen te stroomlijnen en efficiënter te maken.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Aangepaste strategieën voor uw specifieke behoeften",
-                  "Transparante communicatie gedurende het hele project",
-                  "Data-gedreven besluitvorming voor optimale resultaten",
-                  "Voortdurende ondersteuning na lancering"
+                  "Maatwerk automatisering afgestemd op uw specifieke behoeften",
+                  "Verbeterde klantenservice door slimme systemen",
+                  "Datagestuurde marketing voor optimale resultaten",
+                  "Doorlopende ondersteuning en optimalisatie"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
