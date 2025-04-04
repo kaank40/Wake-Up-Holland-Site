@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Savy<span className="text-primary">.</span></h3>
+            <h3 className="text-2xl font-bold mb-6">Wake Up Holland<span className="text-primary">.</span></h3>
             <p className="mb-6 text-gray-300">
-              Wij helpen bedrijven groeien door middel van innovatieve digitale marketingstrategieën.
+              Wij helpen bedrijven groeien door middel van innovatieve automatiseringsoplossingen voor klantenservice en marketing.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
@@ -73,7 +73,7 @@ const Footer = () => {
               <li>Hoofdstraat 123</li>
               <li>1234 AB Amsterdam</li>
               <li>Nederland</li>
-              <li className="pt-2">info@savyagency.nl</li>
+              <li className="pt-2">info@wakeupholland.nl</li>
               <li>+31 20 123 4567</li>
             </ul>
           </div>
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            &copy; {currentYear} Savy Digital Marketing Agency. Alle rechten voorbehouden.
+            &copy; {currentYear} Wake Up Holland. Alle rechten voorbehouden.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-400 hover:text-primary transition-colors text-sm">

@@ -56,7 +56,7 @@ const Navbar = () => {
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="flex items-center" onClick={(e) => handleNavClick(e, '#')}>
-          <span className="text-2xl font-display font-bold text-secondary">Savy<span className="text-primary">.</span></span>
+          <span className="text-2xl font-display font-bold text-secondary">Wake Up Holland<span className="text-primary">.</span></span>
         </a>
 
         {/* Desktop Navigation */}
