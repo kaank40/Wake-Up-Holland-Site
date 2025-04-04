@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Navigation items
+  // Navigation items met correct werkende links
   const navItems = [
     { name: 'Thuis', href: '#' },
     { name: 'Diensten', href: '#diensten' },
@@ -32,11 +32,30 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    // Als het gewoon een # is, scroll naar boven
+    if (href === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsMenuOpen(false);
+      return;
+    }
+
+    // Anders scroll naar de specifieke sectie
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    } else {
+      console.error(`Element with id ${href.substring(1)} not found`);
+    }
+  };
+
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center">
+        <a href="#" className="flex items-center" onClick={(e) => handleNavClick(e, '#')}>
           <span className="text-2xl font-display font-bold text-secondary">Savy<span className="text-primary">.</span></span>
         </a>
 
@@ -47,6 +66,7 @@ const Navbar = () => {
               key={item.name} 
               href={item.href}
               className="font-medium text-secondary hover:text-primary transition-colors"
+              onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.name}
             </a>
@@ -55,7 +75,18 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <Button className="btn-primary">Contact</Button>
+          <Button 
+            className="btn-primary"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactElement = document.getElementById('contact');
+              if (contactElement) {
+                contactElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Contact
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -76,12 +107,24 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="font-medium text-secondary hover:text-primary transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
               </a>
             ))}
-            <Button className="btn-primary w-full mt-4">Contact</Button>
+            <Button 
+              className="btn-primary w-full mt-4"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactElement = document.getElementById('contact');
+                if (contactElement) {
+                  contactElement.scrollIntoView({ behavior: 'smooth' });
+                }
+                setIsMenuOpen(false);
+              }}
+            >
+              Contact
+            </Button>
           </div>
         </div>
       )}
