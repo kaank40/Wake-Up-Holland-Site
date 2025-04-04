@@ -9,21 +9,21 @@ const Testimonials = () => {
       position: "Marketingmanager, TechNova B.V.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop",
       stars: 5,
-      text: "Savy heeft onze online marketingstrategie compleet getransformeerd. Ze zijn niet alleen professionals in hun vakgebied, maar bieden ook een persoonlijke service die boven verwachting is."
+      text: "Wake Up Holland heeft onze automatiseringsprocessen compleet getransformeerd. Ze zijn niet alleen professionals in hun vakgebied, maar bieden ook een persoonlijke service die boven verwachting is."
     },
     {
       name: "Thomas Bakker",
       position: "Eigenaar, Bakker's Koffie",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop",
       stars: 5,
-      text: "Sinds we samenwerken met Savy is ons verkeer verdubbeld en de conversie significant verbeterd. Hun expertise in SEO en betaalde advertenties is ongeëvenaard. Zeer aanbevolen!"
+      text: "Sinds we samenwerken met Wake Up Holland is onze klantenservice-efficiëntie verdubbeld en de klanttevredenheid significant verbeterd. Hun expertise in automatisering en klantservicesystemen is ongeëvenaard. Zeer aanbevolen!"
     },
     {
       name: "Emma Jansen",
       position: "Oprichter, GreenLeaf Wellness",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop",
       stars: 5,
-      text: "Het team van Savy heeft mijn visie perfect vertaald naar een prachtige website en effectieve marketingstrategie. Ze zijn proactief, creatief en leveren altijd op tijd."
+      text: "Het team van Wake Up Holland heeft mijn visie perfect vertaald naar effectieve automatiseringsoplossingen voor onze klantenservice. Ze zijn proactief, innovatief en leveren altijd op tijd."
     }
   ];
 
@@ -64,7 +64,7 @@ const Testimonials = () => {
         <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-6">Klaar om uw bedrijf naar het volgende niveau te tillen?</h3>
           <p className="mb-8 text-white/80 max-w-2xl mx-auto">
-            Laat ons u helpen met een digitale marketingstrategie die echt werkt voor uw bedrijf.
+            Laat ons u helpen met automatiseringsoplossingen en klantenservicesystemen die echt werken voor uw bedrijf.
           </p>
           <button className="px-8 py-3 bg-white text-primary font-medium rounded-full hover:bg-gray-100 transition-colors">
             Neem contact op
