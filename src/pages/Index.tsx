@@ -6,6 +6,7 @@ import Services from '../components/Services';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
