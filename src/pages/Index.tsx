@@ -28,7 +28,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Over Ons</h2>
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-lg mb-8">
-                Bij Savy zijn we gespecialiseerd in het stroomlijnen van bedrijfsprocessen door slimme automatiseringsoplossingen. 
+                Bij Wake Up Holland zijn we gespecialiseerd in het stroomlijnen van bedrijfsprocessen door slimme automatiseringsoplossingen. 
                 Onze expertise ligt in het ontwikkelen van systemen voor klantenservice en marketing die uw bedrijf helpen efficiënter te werken en betere resultaten te behalen.
               </p>
               <p className="text-lg mb-8">
