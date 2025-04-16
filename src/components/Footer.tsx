@@ -1,5 +1,28 @@
+
 import React from 'react';
-import { Facebook, Instagram, Linkedin, TikTok, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+
+// Custom TikTok icon since it's not available in lucide-react
+const TikTokIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+    <path d="M16 8v8" />
+    <path d="M12 16v4" />
+    <path d="M22 8v6a4 4 0 0 1-4 4h-1" />
+    <path d="M17 12a5 5 0 0 0 5-4" />
+    <path d="M15 8a5 5 0 0 0-5-5h-4v10" />
+  </svg>
+);
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +45,7 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://www.tiktok.com/@wakeupholland" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <TikTok className="h-5 w-5" />
+                <TikTokIcon />
               </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
@@ -105,7 +128,7 @@ const Footer = () => {
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://www.tiktok.com/@wakeupholland" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <TikTok className="h-5 w-5" />
+                <TikTokIcon />
               </a>
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
