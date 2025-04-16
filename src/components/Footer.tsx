@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, TikTok, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,16 +15,16 @@ const Footer = () => {
               Wij helpen bedrijven groeien door middel van innovatieve automatiseringsoplossingen voor klantenservice en marketing.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/wakeup.holland/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.tiktok.com/@wakeupholland" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <TikTok className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -70,11 +69,24 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Contact</h4>
             <ul className="space-y-3 text-gray-300">
-              <li>Hoofdstraat 123</li>
-              <li>1234 AB Amsterdam</li>
-              <li>Nederland</li>
-              <li className="pt-2">info@wakeupholland.nl</li>
-              <li>+31 20 123 4567</li>
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                Overhoeksplein 3
+              </li>
+              <li className="flex items-center gap-2 pl-6">1031KS Amsterdam</li>
+              <li className="flex items-center gap-2 pl-6">Nederland</li>
+              <li className="flex items-center gap-2 pt-2">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:contact@wakeupholland.com" className="hover:text-primary transition-colors">
+                  contact@wakeupholland.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+31638672878" className="hover:text-primary transition-colors">
+                  06 38672878
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -84,15 +96,21 @@ const Footer = () => {
             &copy; {currentYear} Wake Up Holland. Alle rechten voorbehouden.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-sm">
-              Privacybeleid
-            </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-sm">
-              Algemene voorwaarden
-            </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-sm">
-              Cookies
-            </a>
+            {/* Social Media Links */}
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="https://www.instagram.com/wakeup.holland/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="https://www.tiktok.com/@wakeupholland" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <TikTok className="h-5 w-5" />
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
