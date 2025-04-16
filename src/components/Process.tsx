@@ -1,8 +1,13 @@
 
 import React from 'react';
-import { ArrowRight, CheckCircle, Search, Cog, Zap, BarChart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Search, Cog, Zap, BarChart, Calendar, Inbox } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
+import { toast } from '@/components/ui/use-toast';
 
 const Process = () => {
+  const navigate = useNavigate();
+
   const steps = [
     {
       icon: <Search className="h-6 w-6 text-white" />,
@@ -25,6 +30,28 @@ const Process = () => {
       description: "We blijven uw systemen monitoren en optimaliseren om ervoor te zorgen dat ze blijven presteren en meegroeien met uw bedrijf."
     }
   ];
+
+  const handleDemoRequest = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Plan een demonstratie",
+        description: "Vul het contactformulier in en we nemen binnen 24 uur contact met u op voor een demo.",
+      });
+    }
+  };
+
+  const handleSolutions = () => {
+    const element = document.getElementById('diensten');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Onze oplossingen",
+        description: "Bekijk onze diensten en ontdek wat wij voor u kunnen betekenen.",
+      });
+    }
+  };
 
   return (
     <section id="werkwijze" className="section">
@@ -83,41 +110,68 @@ const Process = () => {
             
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h4 className="text-xl font-bold mb-4">Plan een gratis consultatie</h4>
-              <form>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1">Naam</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Uw naam"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1">E-mail</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="uw@email.nl"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1">Bericht</label>
+                  <textarea 
+                    id="message" 
+                    rows={3}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    placeholder="Hoe kunnen we u helpen?"
+                  ></textarea>
+                </div>
                 <div className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-1">Naam</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="Uw naam"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-1">E-mail</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="uw@email.nl"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-1">Bericht</label>
-                    <textarea 
-                      id="message" 
-                      rows={3}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      placeholder="Hoe kunnen we u helpen?"
-                    ></textarea>
-                  </div>
-                  <button 
+                  <Button 
                     type="submit" 
-                    className="w-full btn-primary"
+                    className="w-full"
                   >
                     Verstuur Aanvraag
-                  </button>
+                  </Button>
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    className="w-full"
+                    onClick={() => navigate('/aanvragen')}
+                  >
+                    <Inbox className="mr-2 h-4 w-4" />
+                    Bekijk verzonden aanvragen
+                  </Button>
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    className="w-full"
+                    onClick={handleDemoRequest}
+                  >
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Plan een demonstratie
+                  </Button>
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    className="w-full"
+                    onClick={handleSolutions}
+                  >
+                    <Search className="mr-2 h-4 w-4" />
+                    Ontdek onze oplossingen
+                  </Button>
                 </div>
               </form>
             </div>
