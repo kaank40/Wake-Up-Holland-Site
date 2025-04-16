@@ -2,8 +2,34 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Settings, Users, LineChart, MessageSquareText, Cog, Smartphone } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
+import { toast } from '@/components/ui/use-toast';
 
 const Services = () => {
+  const navigate = useNavigate();
+  
+  const handleMoreInfo = (serviceTitle: string) => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Meer informatie aangevraagd",
+        description: `We sturen u graag meer informatie over ${serviceTitle}. Vul het contactformulier in.`,
+      });
+    }
+  };
+
+  const handleAllSolutions = () => {
+    const element = document.getElementById('diensten');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Onze oplossingen",
+        description: "Hier vindt u een overzicht van al onze diensten.",
+      });
+    }
+  };
+
   const services = [
     {
       icon: <Settings className="h-10 w-10 text-primary" />,
@@ -53,7 +79,11 @@ const Services = () => {
               <div className="mb-6">{service.icon}</div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-muted-foreground mb-6">{service.description}</p>
-              <Button variant="link" className="p-0 text-primary font-medium">
+              <Button 
+                variant="link" 
+                className="p-0 text-primary font-medium"
+                onClick={() => handleMoreInfo(service.title)}
+              >
                 Meer informatie
               </Button>
             </div>
@@ -61,7 +91,12 @@ const Services = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <Button className="btn-primary">Bekijk alle oplossingen</Button>
+          <Button 
+            className="btn-primary"
+            onClick={handleAllSolutions}
+          >
+            Bekijk alle oplossingen
+          </Button>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const Testimonials = () => {
   const testimonials = [
@@ -26,6 +27,17 @@ const Testimonials = () => {
       text: "Het team van Wake Up Holland heeft mijn visie perfect vertaald naar effectieve automatiseringsoplossingen voor onze klantenservice. Ze zijn proactief, innovatief en leveren altijd op tijd."
     }
   ];
+
+  const handleContactClick = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Neem contact met ons op",
+        description: "Vul het contactformulier in en wij nemen zo spoedig mogelijk contact met u op.",
+      });
+    }
+  };
 
   return (
     <section className="section bg-white">
@@ -66,7 +78,10 @@ const Testimonials = () => {
           <p className="mb-8 text-white/80 max-w-2xl mx-auto">
             Laat ons u helpen met automatiseringsoplossingen en klantenservicesystemen die echt werken voor uw bedrijf.
           </p>
-          <button className="px-8 py-3 bg-white text-primary font-medium rounded-full hover:bg-gray-100 transition-colors">
+          <button 
+            className="px-8 py-3 bg-white text-primary font-medium rounded-full hover:bg-gray-100 transition-colors"
+            onClick={handleContactClick}
+          >
             Neem contact op
           </button>
         </div>

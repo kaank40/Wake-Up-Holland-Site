@@ -52,6 +52,14 @@ const Process = () => {
       });
     }
   };
+  
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Aanvraag verzonden",
+      description: "Wij nemen zo spoedig mogelijk contact met u op. Bedankt voor uw aanvraag!",
+    });
+  };
 
   return (
     <section id="werkwijze" className="section">
@@ -110,7 +118,7 @@ const Process = () => {
             
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h4 className="text-xl font-bold mb-4">Plan een gratis consultatie</h4>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleFormSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">Naam</label>
                   <input 
