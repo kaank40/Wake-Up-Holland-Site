@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, CheckCircle, Search, Cog, Zap, BarChart, Calendar, Inbox } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,28 @@ import { toast } from '@/components/ui/use-toast';
 
 const Process = () => {
   const navigate = useNavigate();
+
+  const handleDemoRequest = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Plan een demonstratie",
+        description: "Vul het contactformulier in en we plannen zo snel mogelijk een demonstratie.",
+      });
+    }
+  };
+
+  const handleSolutions = () => {
+    const element = document.getElementById('diensten');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      toast({
+        title: "Onze diensten",
+        description: "Bekijk hier een overzicht van al onze diensten.",
+      });
+    }
+  };
 
   const steps = [
     {
@@ -31,28 +52,6 @@ const Process = () => {
     }
   ];
 
-  const handleDemoRequest = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      toast({
-        title: "Plan een demonstratie",
-        description: "Vul het contactformulier in en we nemen binnen 24 uur contact met u op voor een demo.",
-      });
-    }
-  };
-
-  const handleSolutions = () => {
-    const element = document.getElementById('diensten');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      toast({
-        title: "Onze oplossingen",
-        description: "Bekijk onze diensten en ontdek wat wij voor u kunnen betekenen.",
-      });
-    }
-  };
-  
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     toast({
