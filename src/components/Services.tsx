@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Settings, Users, LineChart, MessageSquareText, Cog, Smartphone, 
          Mail, FileText, BookUser, BarChart4, CalendarClock, Bot,
-         MessageCircle, Receipt, Connection, UserPlus, Calendar, ShoppingCart, 
+         MessageCircle, Receipt, Network, UserPlus, Calendar, ShoppingCart, 
          KeyRound, Brain } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import { toast } from '@/components/ui/use-toast';
@@ -76,7 +76,7 @@ const Services = () => {
       description: "Stroomlijn het verkoopproces van lead tot conversie met intelligente automatisering."
     },
     {
-      icon: <Connection className="h-10 w-10 text-primary" />,
+      icon: <Network className="h-10 w-10 text-primary" />,
       title: "Integratie Oplossingen",
       description: "Verbind uw apps en systemen om gegevensuitwisseling te automatiseren en silo's te elimineren."
     },
